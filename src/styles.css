@@ -1,0 +1,38 @@
+body{
+    background: paleturquoise;
+}
+#content{
+    width: 70%;
+    margin: 20px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+#tabs-wrapper{
+    border: 1px solid black;
+}
+#links{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr)
+}
+#links > div{
+    justify-self: center;
+}
+#links > div:hover{
+    cursor: pointer;
+}
+#tabs-content{
+    display: grid;
+    grid-template-columns: minmax(auto, 255px) minmax(auto, 255px);
+    grid-column-gap: 140px;
+    grid-row-gap: 40px;
+
+}
+.menu-content{
+    display: grid;
+    justify-content: center;
+    padding: 20px 20px;
+}
+div.menu-content > img{
+    border-radius: 50%;
+    border: 2px solid white;
+}
