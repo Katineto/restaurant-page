@@ -1,6 +1,7 @@
 import icePop from './img/ice-pops.jpg'
 import almondMuffin from './img/almond-muffin.jpg'
 import carrotRoll from './img/carrot-roll.jpg'
+import chocoCake from './img/choc-cake.jpg'
 
 function createItem(tabs, img) {
     const parent = document.createElement('div')
@@ -21,18 +22,25 @@ function loadMenuTab() {
     while(content.firstChild){
         content.removeChild(content.firstChild)
     }
-    // const menu = document.createElement('div')
-    // content.appendChild(menu)
-    // menu.classList.add('menu-content') 
+    const menuWrapper = document.createElement('div')
+    menuWrapper.id = 'menu-wrapper'
+    content.appendChild(menuWrapper)
     
-    const description1 = createItem(content, icePop)
-    description1.innerText = 'This is an Ice Pop made with fresh berries and Greek Yogurt.'
+    const description1 = createItem(menuWrapper, icePop)
+    description1.innerText = `Fresh berries Ice Pop with yogurt.`
     
-    const description2 = createItem(content, almondMuffin)
-    description2.innerText = `Who doesn't like a muffin?!`
+    const description2 = createItem(menuWrapper, almondMuffin)
+    description2.innerText = `Almond Joy Cupcake`
     
-    const description3 = createItem(content,carrotRoll)
-    description3.innerText = `For cinnamon lovers!`
+    const description3 = createItem(menuWrapper,carrotRoll)
+    description3.innerText = `
+        Carrot roll.
+        For cinnamon lovers!`
+    const description4 = createItem(menuWrapper, chocoCake)
+    description4.innerText = `
+    Flourless cake.
+    Less flour - more chocolate!`
+    
 }
 
 export {

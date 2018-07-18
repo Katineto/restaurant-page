@@ -1,4 +1,5 @@
 import Logo from './muffins.svg'
+import footerLogo from './muffins2.svg'
 import './styles.css'
 
 const content = document.getElementById('content')
@@ -25,6 +26,7 @@ function createTabs() {
     const home = document.createElement('div')
     home.id = 'home'
     home.innerText = 'Home'
+    home.classList.add('selected')
     const menu = document.createElement('div')
     menu.id = 'menu'
     menu.innerText = 'Menu'
@@ -40,9 +42,19 @@ function createTabs() {
     tabsContainer.appendChild(tabsContent)
     content.appendChild(tabsContainer)
 }
+function createFooter() {
+    const footer = document.createElement('div')
+    footer.id = 'footer'
+    const footerImg = new Image()
+    footerImg.src = footerLogo
+    footer.appendChild(footerImg)
+    content.appendChild(footer)
+}
+
 
 export {
     loadLogo,
     createHeadline,
-    createTabs
+    createTabs,
+    createFooter
 }
